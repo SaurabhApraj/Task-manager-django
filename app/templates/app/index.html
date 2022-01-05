@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+<style>
+      .container{
+        width: 1200px;
+        margin:0 auto;
+        display: flex;
+        height:90vh;
+        justify-content:space-between;
+      }
+      .container .image-box{
+        float: left;
+        width: 600px;
+        margin-top:30px;
+      }
+      .container .quote{
+        float: left;
+        width: 400px;
+        display:flex;
+        align-item:center;
+      }
+      .info{
+        font-family: 'Lobster', cursive;
+        font-size:3.5rem;
+        color:#542c85;
+        margin-top:100px;
+      }
+</style>
+<div class="container">
+    <div class="image-box">
+        <img src="{% static 'images/taskimage.png' %}" alt="Task Image" width="700px">
+    </div>
+    <div class="quote">
+        <p class="info">A good plan today is better than a perfect plan tomorrow.</p>
+    </div>
+</div>
+{% endblock content %}

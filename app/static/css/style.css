@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+    background-color: #542c85;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo p {
+    font-size: 1.5rem;
+    margin: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .logo p:hover {
+    color: #d6c6ec;
+    cursor: pointer;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    list-style: none;
+    margin: 13px;
+    padding: 7px 15px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  nav ul li a:hover {
+    color: #f2f2f2;
+    cursor: pointer;
+    transition: 0.1s;
+    border-bottom: 2px solid #fff;
+  }
+  .btnarea button {
+    margin: 15px;
+    padding: 7px;
+    width: 80px;
+    font-size: 0.9rem;
+    border: none;
+    color: #444;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .btnarea button:hover {
+    cursor: pointer;
+  }
+/*=================  Body  ==================*/
+
+  /*=================  Footer  ==================*/
+  .footer {
+    background-color: #542c85;
+    grid-column: 1/-1;
+    display: flex;
+    bottom: 0;
+    justify-content: space-between;
+  }
+  ul {
+    display: flex;
+  }
+  ul li {
+    list-style: none;
+    margin: 13px;
+    padding: 7px 15px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  ul li a:hover {
+    color: #f2f2f2;
+  }
+  .copyright {
+    margin: 20px;
+    color: #fff;
+  }
+  /*============================================*/

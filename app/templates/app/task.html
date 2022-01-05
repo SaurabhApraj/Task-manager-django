@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/task.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="task-list">
+        <table>
+            <caption>Task Manager</caption>
+            <tr>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <td>
+                        <a href="{% url 'CreateTaskPage' %}" class="btn">Create</a>
+                    </td>
+                    <td>
+                        <select>
+                            <option>Not Completed</option>
+                            <option>Completed</option>
+                        </select>
+                    </td>
+                </form>
+            </tr>
+            {% for tk in task.object_list %}
+            <tr>
+                {% if not tk %}
+                    <p>No Task Found</p>
+                {% else %}
+                    <td colspan="2">
+                        <a href="{% url 'TaskDetailPage' tk.id %}">{{tk.task_name}}</a>
+                    </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="page-links">
+            {% if task.has_previous %}
+            <a href="{% url 'TaskPage' %}?page={{task.previous_page_number}}" class="links">Previous Page</a>
+            {% endif %}
+            {% if task.has_next %}
+            <a href="{% url 'TaskPage' %}?page={{task.next_page_number}}" class="links">Next Page</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

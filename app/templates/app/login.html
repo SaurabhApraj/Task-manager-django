@@ -1,0 +1,40 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<style>
+    .login-box{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        height: 82vh;
+    }
+</style>
+<div class="login-box">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input type="text" id="" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="text" id="" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Login">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="{% url 'HomePage' %}">Back To Home</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock content %}

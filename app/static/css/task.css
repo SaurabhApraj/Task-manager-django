@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1ebf8;
+}
+.task-list{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: #542c85;
+}
+a:hover{
+    color: #fff;
+}
+table{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+}
+caption{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #542c85;
+    font-family: 'Lobster', cursive;
+}
+td{
+    padding: 10px;
+}
+td:nth-child(1){
+    padding: 10px;
+    background-color: #f1ebf8;
+    border-radius: 4px;
+}
+td:nth-child(1):hover{
+    cursor: pointer;
+    background-color: #c9b2e4;
+}
+.btn{
+    width: 100px;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    background-color: #542c85;
+    border-radius: 4px;
+}
+.page-links{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.links{
+    font-size: 1.2rem;
+    color: #542c85;
+}
+.links:hover{
+    color: black;
+}
